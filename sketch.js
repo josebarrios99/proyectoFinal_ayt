@@ -103,7 +103,7 @@ function respuesta1(pregunta){
     setupgeneral();
   }else if(pregunta==2){
     enojado.loop();
-    colores = 300;
+    colores = 30;
     setupgeneral();
   }else if(pregunta==3){
     sensible.loop();
@@ -118,12 +118,12 @@ function respuesta2(pregunta){
     angulo = 1;
     setupgeneral();
   }else if(pregunta==1){
-    angulo = 2;
+    angulo = -3;
     parejas.loop();
     setupgeneral();
   }else if(pregunta==2){
     calmado.loop();
-    angulo = 2.5;
+    angulo = -1;
     setupgeneral();
   }else if(pregunta==3){
     racional.loop();
@@ -135,18 +135,19 @@ function respuesta2(pregunta){
 function respuesta3(pregunta){
   if (pregunta==0) {
     academicas.loop();
-    np=300;
+    np=200;
     setupgeneral();
   }else if(pregunta==1){
-    np = 200;
+    np = 150;
+    angulo=1.5;
     amigos.loop();
     setupgeneral();
   }else if(pregunta==2){
-    np = 100;
+    np = 70;
     triste.loop();
     setupgeneral();
   }else if(pregunta==3){
-    np = 50;
+    np = 10;
     extrovertida.loop();
     setupgeneral();
     console.log(np);
@@ -155,15 +156,15 @@ function respuesta3(pregunta){
 function respuesta4(pregunta){
   if (pregunta==0) {
     descanso.loop();
-    inc=0.1;
+    inc=0.00005;
     setupgeneral();
   }else if(pregunta==1){
     solos.loop();
-    inc=5;
+    inc=-0.5;
     setupgeneral();
   }else if(pregunta==2){
     positivo.loop();
-    inc=3;
+    inc=0.3;
     setupgeneral();
   }else if(pregunta==3){
     inc=2;
