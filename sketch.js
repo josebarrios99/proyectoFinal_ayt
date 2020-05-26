@@ -156,6 +156,7 @@ function respuesta3(pregunta){
     setupgeneral();
   }else if(pregunta==3){
     np = 10;
+    colores = 100;
     extrovertida.loop();
     setupgeneral();
     console.log(np);
@@ -165,15 +166,18 @@ function respuesta4(pregunta){
   if (pregunta==0) {
     descanso.loop();
     inc=0.00005;
+    angulo=4;
     setupgeneral();
   }else if(pregunta==1){
     solos.loop();
     inc=-0.5;
     colores=40;
+    angulo=-3;
     setupgeneral();
   }else if(pregunta==2){
     positivo.loop();
     inc=0.3;
+    angulo=3;
     colores=360;
     setupgeneral();
   }else if(pregunta==3){
