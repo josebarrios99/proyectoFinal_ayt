@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+  <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script language="javascript" type="text/javascript" src="particle.js"></script>
+  <script src="/pregunta.js"></script>
+</head>
+
+<body>
+
+  <div class="peti">
+    <a href="/pregunta2.html">Siguiente pregunta</a>
+    <script>
+      let preguntas = [];
+      let p1 = new Pregunta("TU ACTIVIDAD FAVORITA DURANTE LA CUARENTENA",[
+        "ARTÍSTICAS",
+        "DEPORTIVAS",
+        "ACADÉMICAS",
+        "DESCANSO"
+      ]);
+      let p2 = new Pregunta("LA ÚLTIMA PERSONAS CON LA QUE SALISTE",[
+        "FAMILIARES",
+        "PAREJAS",
+        "AMIGOS",
+        "SOLOS"
+      ]);
+      let p3 = new Pregunta("SENTIMIENTO CUANDO LA PANDEMIA LLEGÓ A COLOMBIA",[
+        "ENOJADO",
+        "CALMADO",
+        "TRISTE",
+        "POSITIVO"
+      ]);
+      let p4 = new Pregunta("TE CONSIDERAS UNA PERSONA",[
+        "SENSIBLE",
+        "RACIONAL",
+        "EXTROVERTIDA",
+        "INTROVERTIDA"
+      ]);
+      let i = 0;
+      preguntas.push(p1,p2,p3,p4);
+      let actual = preguntas[i];
+      function siguiente(){
+        if (i!=3) {
+          i+=1;
+        actual = preguntas[i];
+        document.body.innerHTML="<div class='peti'>"+"<button onclick='siguiente()'>Siguiente pregunta</button>"+"<h2>"+actual.pregunta+"</h2>"+"<div class='botones1'><button onclick='respuesta1("+i+");' class='boton'>"+actual.respuestas[0]+"</button><button onclick='respuesta2("+i+");' class='boton'>"+actual.respuestas[1]+"</button></div><div class='botones2'><button onclick='respuesta3("+i+");' class='boton'>"+actual.respuestas[2]+"</button><button onclick='respuesta4("+i+");' class='boton'>"+actual.respuestas[3]+"</button></div>"+"</div>";
+        }else{
+          document.body.innerHTML="peticio";
+        }
+
+      }
+      document.body.innerHTML="<div class='peti'>"+"<button onclick='siguiente()'>Siguiente pregunta</button>"+"<h2>"+actual.pregunta+"</h2>"+"<div class='botones1'><button onclick='respuesta1("+i+");' class='boton'>"+actual.respuestas[0]+"</button><button onclick='respuesta2("+i+");' class='boton'>"+actual.respuestas[1]+"</button></div><div class='botones2'><button onclick='respuesta3("+i+");' class='boton'>"+actual.respuestas[2]+"</button><button onclick='respuesta4("+i+");' class='boton'>"+actual.respuestas[3]+"</button></div>"+"</div>";
+      
+    </script>
+  
+  </div>
+ 
+</body>
+</html>

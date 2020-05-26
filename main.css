@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+}
+body{
+    background: rgb(248, 248, 248);
+}
+h1{
+    color: #2F01B0;
+    font-family: 'Tw Cen MT Condensed';
+    font-size: 50px;
+    padding-bottom: 3%;
+}
+h2{
+    color: #2F01B0;
+    font-family: 'Tw Cen MT Condensed';
+    font-size: 50px;
+    text-align: center;
+}
+.peti{
+    text-align: center;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+.peti2{
+    text-align: center;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+.peti3{
+    text-align: center;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+.peti4{
+    text-align: center;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 3%;
+}
+.menu{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.play{
+    text-decoration: none;
+    color: rgb(139, 139, 139);
+    font-family: 'Tw Cen MT Condensed';
+}
+.menu__content{
+    margin-top: 20%;
+    align-content: center;
+}
+.botones1{
+    
+    padding: 5%;
+}
+.botones2{
+    margin-top: 55%;
+    padding: 5%;
+}
+.botones2_4{
+    margin-top: 100%;
+    padding: 5%;
+}
+.botones2_2{
+    margin-top: 70%;
+    padding: 5%;
+}
+.botones2_3{
+    margin-top: 50%;
+    padding: 5%;
+}
+.boton{
+    font-family: 'Roboto', sans-serif;
+    background: none;
+    text-align: center;
+    border: none;
+    color: #7766D2;
+    margin-left: 5%;
+    font-size: 20px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #7766D2;
+}
+
+
+
+@font-face {
+    font-family: 'Tw Cen MT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Tw Cen MT'), url('Tw Cen MT.woff') format('woff');
+}
+@font-face {
+    font-family: 'Tw Cen MT Condensed';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Tw Cen MT Condensed'), url('TCCM____.woff') format('woff');
+}
+@font-face {
+    font-family: 'Tw Cen MT Condensed Extra Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Tw Cen MT Condensed Extra Bold'), url('TCCEB.woff') format('woff');
+}
+@font-face {
+    font-family: 'Tw Cen MT Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Tw Cen MT Bold'), url('TCB_____.woff') format('woff');
+}
