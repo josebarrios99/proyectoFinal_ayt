@@ -48,7 +48,7 @@ let triste;
 
 
 
-let activado = false;
+let activado;
 
 function preload() {
   // Load a sound file
@@ -74,16 +74,17 @@ function setup() {
   colores = 255;
   inc=0.1;
   np=400;
+  activado = false
   console.log("peticio")
   background(0);
-  amigos.loop();
+  
   createCanvas(1200, 700);
 }
 
 function draw() {
   
-  if (activado=true) {
-    sonido();
+  if (activado==true) {
+    //sonido();
   }
   console.log(activado)
   drawGeneral();
@@ -92,7 +93,9 @@ function draw() {
 function respuesta1(pregunta){
   if (pregunta==0) {
     colores = 100;
+    amigos.loop();
 
+    console.log("peti")
     setupgeneral();
   }else if(pregunta==1){
     colores = 250;
@@ -108,10 +111,13 @@ function respuesta1(pregunta){
 }
 function respuesta2(pregunta){
   if (pregunta==0) {
+    sensible.loop();
+    amigos.pause();
     angulo = 1;
     setupgeneral();
   }else if(pregunta==1){
     angulo = 2;
+    sensible.loop();
     setupgeneral();
   }else if(pregunta==2){
     angulo = 2.5;
@@ -124,6 +130,7 @@ function respuesta2(pregunta){
 }
 function respuesta3(pregunta){
   if (pregunta==0) {
+    racional.loop();
     np=300;
     setupgeneral();
   }else if(pregunta==1){
@@ -140,6 +147,7 @@ function respuesta3(pregunta){
 }
 function respuesta4(pregunta){
   if (pregunta==0) {
+    racional.loop();
     inc=0.1;
     setupgeneral();
   }else if(pregunta==1){
