@@ -37,7 +37,8 @@ let positivo;
 let racional;
 let sensible;
 let triste;
-
+let solos;
+let artisticas;
 
 
 
@@ -53,6 +54,7 @@ let activado;
 function preload() {
   // Load a sound file
 academicas= loadSound('./sonidos/Académicas.mp3');
+artisticas= loadSound('./sonidos/Artisticas.mp3');
 amigos= loadSound('./sonidos/Amigos.mp3');
 calmado= loadSound('./sonidos/Calmado.mp3');
 deportivas= loadSound('./sonidos/Deportivas.mp3');
@@ -66,6 +68,7 @@ positivo= loadSound('./sonidos/Positivo.mp3');
 racional= loadSound('./sonidos/Racional.mp3');
 sensible= loadSound('./sonidos/Sensible.mp3');
 triste= loadSound('./sonidos/Triste.mp3');
+solos= loadSound('./sonidos/Solos.mp3');
 
 }
 
@@ -84,26 +87,26 @@ function setup() {
 function draw() {
   
   if (activado==true) {
-    //sonido();
+    sonido();
   }
-  console.log(activado)
   drawGeneral();
 }
 
 function respuesta1(pregunta){
   if (pregunta==0) {
+    artisticas.loop();
     colores = 100;
-    amigos.loop();
-
-    console.log("peti")
     setupgeneral();
   }else if(pregunta==1){
+    familiares.loop();
     colores = 250;
     setupgeneral();
   }else if(pregunta==2){
+    enojado.loop();
     colores = 300;
     setupgeneral();
   }else if(pregunta==3){
+    sensible.loop();
     colores = 360;
     setupgeneral();
     console.log(np);
@@ -111,18 +114,19 @@ function respuesta1(pregunta){
 }
 function respuesta2(pregunta){
   if (pregunta==0) {
-    sensible.loop();
-    amigos.pause();
+    deportivas.loop();
     angulo = 1;
     setupgeneral();
   }else if(pregunta==1){
     angulo = 2;
-    sensible.loop();
+    parejas.loop();
     setupgeneral();
   }else if(pregunta==2){
+    calmado.loop();
     angulo = 2.5;
     setupgeneral();
   }else if(pregunta==3){
+    racional.loop();
     angulo = 4;
     setupgeneral();
     console.log(np);
@@ -130,35 +134,40 @@ function respuesta2(pregunta){
 }
 function respuesta3(pregunta){
   if (pregunta==0) {
-    racional.loop();
+    academicas.loop();
     np=300;
     setupgeneral();
   }else if(pregunta==1){
     np = 200;
+    amigos.loop();
     setupgeneral();
   }else if(pregunta==2){
     np = 100;
+    triste.loop();
     setupgeneral();
   }else if(pregunta==3){
     np = 50;
+    extrovertida.loop();
     setupgeneral();
     console.log(np);
   }
 }
 function respuesta4(pregunta){
   if (pregunta==0) {
-    racional.loop();
+    descanso.loop();
     inc=0.1;
     setupgeneral();
   }else if(pregunta==1){
+    solos.loop();
     inc=5;
     setupgeneral();
   }else if(pregunta==2){
+    positivo.loop();
     inc=3;
     setupgeneral();
   }else if(pregunta==3){
     inc=2;
-
+    introvertida.loop();
     setupgeneral();
     console.log(np);
   }
@@ -192,11 +201,42 @@ function drawGeneral(){
 function sonido(){
   let volume = map(mouseX, 0, width, 0, 1);
   volume = constrain(volume, 0, 1);
+  academicas.amp(volume);
   amigos.amp(volume);
+  artisticas.amp(volume);
+  calmado.amp(volume);
+  deportivas.amp(volume);
+  descanso.amp(volume);
+  enojado.amp(volume);
+  extrovertida.amp(volume);
+  familiares.amp(volume);
+  introvertida.amp(volume);
+  parejas.amp(volume);
+  positivo.amp(volume);
+  racional.amp(volume);
+  sensible.amp(volume);
+  solos.amp(volume);
+  triste.amp(volume);
+
 
   let speed = map(mouseY, 0.1, height, 0, 2);
   speed = constrain(speed, 0.01, 4);
+  academicas.rate(speed);
   amigos.rate(speed);
+  artisticas.rate(speed);
+  calmado.rate(speed);
+  deportivas.rate(speed);
+  descanso.rate(speed);
+  enojado.rate(speed);
+  extrovertida.rate(speed);
+  familiares.rate(speed);
+  introvertida.rate(speed);
+  parejas.rate(speed);
+  positivo.rate(speed);
+  racional.rate(speed);
+  sensible.rate(speed);
+  solos.rate(speed);
+  triste.rate(speed);
 }
 function activar(){
   activado=true;

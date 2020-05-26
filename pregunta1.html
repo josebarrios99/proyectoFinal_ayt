@@ -46,13 +46,13 @@
         if (i!=3) {
           i+=1;
         actual = preguntas[i];
-        document.body.innerHTML="<div class='peti'>"+"<button onclick='siguiente()'>Siguiente pregunta</button>"+"<h2>"+actual.pregunta+"</h2>"+"<div class='botones1'><button onclick='respuesta1("+i+");' class='boton'>"+actual.respuestas[0]+"</button><button onclick='respuesta2("+i+");' class='boton'>"+actual.respuestas[1]+"</button></div><div class='botones2'><button onclick='respuesta3("+i+");' class='boton'>"+actual.respuestas[2]+"</button><button onclick='respuesta4("+i+");' class='boton'>"+actual.respuestas[3]+"</button></div>"+"</div>";
+        document.body.innerHTML="<div class='peti'>"+"<button onclick='siguiente()' class='siguiente'>Siguiente pregunta</button>"+"<h2>"+actual.pregunta+"</h2>"+"<div class='botones1'><button onclick='respuesta1("+i+");' class='boton'>"+actual.respuestas[0]+"</button><button onclick='respuesta2("+i+");' class='boton'>"+actual.respuestas[1]+"</button></div><div class='botones2'><button onclick='respuesta3("+i+");' class='boton'>"+actual.respuestas[2]+"</button><button onclick='respuesta4("+i+");' class='boton'>"+actual.respuestas[3]+"</button></div>"+"</div>";
         }else{
-          document.body.innerHTML="peticio";
+          document.body.innerHTML="<div class='peti2'>"+"<button onclick='setupgeneral();activar()' class='sonido'>Genera tu onda</button>"+"</div>";
         }
 
       }
-      document.body.innerHTML="<div class='peti'>"+"<button onclick='siguiente()'>Siguiente pregunta</button>"+"<h2>"+actual.pregunta+"</h2>"+"<div class='botones1'><button onclick='respuesta1("+i+");' class='boton'>"+actual.respuestas[0]+"</button><button onclick='respuesta2("+i+");' class='boton'>"+actual.respuestas[1]+"</button></div><div class='botones2'><button onclick='respuesta3("+i+");' class='boton'>"+actual.respuestas[2]+"</button><button onclick='respuesta4("+i+");' class='boton'>"+actual.respuestas[3]+"</button></div>"+"</div>";
+      document.body.innerHTML="<div class='peti'>"+"<button onclick='siguiente()' class='siguiente'>Siguiente pregunta</button>"+"<h2>"+actual.pregunta+"</h2>"+"<div class='botones1'><button onclick='respuesta1("+i+");' class='boton'>"+actual.respuestas[0]+"</button><button onclick='respuesta2("+i+");' class='boton'>"+actual.respuestas[1]+"</button></div><div class='botones2'><button onclick='respuesta3("+i+");' class='boton'>"+actual.respuestas[2]+"</button><button onclick='respuesta4("+i+");' class='boton'>"+actual.respuestas[3]+"</button></div>"+"</div>";
       
     </script>
   
