@@ -75,6 +75,8 @@ solos= loadSound('./sonidos/Solos.mp3');
 function setup() {
   angulo = 0;
   colores = 255;
+  colores2 = 255;
+  colores3 = 255;
   inc=0.1;
   np=400;
   activado = false
@@ -96,14 +98,20 @@ function respuesta1(pregunta){
   if (pregunta==0) {
     artisticas.loop();
     colores = 100;
+    colores2 = 360;
+    colores3 = 100;
     setupgeneral();
   }else if(pregunta==1){
     familiares.loop();
     colores = 250;
+    colores2 = 360;
+    colores3 = 100;
     setupgeneral();
   }else if(pregunta==2){
     enojado.loop();
-    colores = 30;
+    colores = 360;
+    colores2 = 360;
+    colores3 = 360;
     setupgeneral();
   }else if(pregunta==3){
     sensible.loop();
@@ -161,13 +169,16 @@ function respuesta4(pregunta){
   }else if(pregunta==1){
     solos.loop();
     inc=-0.5;
+    colores=40;
     setupgeneral();
   }else if(pregunta==2){
     positivo.loop();
     inc=0.3;
+    colores=360;
     setupgeneral();
   }else if(pregunta==3){
     inc=2;
+    angulo=-2;
     introvertida.loop();
     setupgeneral();
     console.log(np);
@@ -245,7 +256,7 @@ function activar(){
 
 function setupgeneral(){
   createCanvas(1500, 750);
-  colorMode(HSB, colores);
+  colorMode(HSB, colores,colores2,colores3);
   cols = floor(width / scl);
   rows = floor(height / scl);
   fr = createP('');
